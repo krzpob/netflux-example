@@ -9,8 +9,16 @@ Celem aplikacji jest zapoznanie się z programowaniem reaktywnym
 ----
 include::{sourcedir}/guru/springframework/netfluxexample/bootstrap/BootstrapCLR.java[]
 ----
-<0> Jak tylko usuniesz to ...
-<1> Lista jakiś tytułów filmów, troche zmienionych by wiązały się trochę z tematem
-<2> Tworzymy strumień obiektów Movie na podstawie tytułów
-<3> flatMap ponieważ `save` tworzy nowy strumień
-<4>  subscribe jak się zakończy to wykonaj lambdę
+<1> Jak tylko usuniesz to ...
+<2> Lista jakiś tytułów filmów, troche zmienionych by wiązały się trochę z tematem
+<3> Tworzymy strumień obiektów Movie na podstawie tytułów
+<4> flatMap ponieważ `save` tworzy nowy strumień
+<5>  subscribe jak się zakończy to wykonaj lambdę
+
+== Generowanie strumienia danych
+
+[source, java]
+----
+include::{sourcedir}/guru/springframework/netfluxexample/service/MovieServiceImpl.java[lines=21..28]
+----
+<1> generowanie i publikowanie obiektu co 1 sekundę
